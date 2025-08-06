@@ -152,7 +152,7 @@ class SlackOAuth2Adapter(OAuth2ProtocolInterface):
             user_label = users_profile.get("email") or users_profile.get("real_name")
 
             account_identifier = (
-                f"{token_response["team"]["id"]}[{token_response["team"]["name"]}]::"
+                f"{token_response["team"]["id"]}[{token_response["team"]["name"]}]--"
                 f"{users_token["id"]}[{user_label}]"
             )
             userinfo = {
